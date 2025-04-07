@@ -35,3 +35,16 @@ yarn-error.*
 # typescript
 *.tsbuildinfo
 
+# iOS
+ios/
+*.xcworkspace
+*.xcuserstate
+*.xcuserdata
+*.xcodeproj
+
+# Android
+android/
+*.gradle
+*.idea
+*.iml
+
