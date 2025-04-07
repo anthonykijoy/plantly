@@ -8,8 +8,7 @@ import { useUserStore } from "@/store/userStore";
 
 export default function Layout() {
   const hasFinishedOnboarding = useUserStore(
-    // eslint-disable-next-line
-    (state) => state.hasFinishedOnboarding
+    (state) => state.hasFinishedOnboarding,
   );
   if (!hasFinishedOnboarding) {
     return <Redirect href="/onboarding" />;
@@ -17,10 +16,11 @@ export default function Layout() {
   return (
     <Tabs screenOptions={{ tabBarActiveTintColor: theme.colorGreen }}>
       <Tabs.Screen
-        name="index"
+        name="(home)"
         options={{
           title: "home",
           tabBarShowLabel: false,
+          headerShown: false,
           tabBarIcon: ({ size, color }) => (
             <Entypo name="leaf" size={size} color={color} />
           ),
